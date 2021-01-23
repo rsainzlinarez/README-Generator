@@ -9,28 +9,47 @@ const questions = [
   {
     type: 'input',
     name: 'title',
-    message: 'What is the title of the project?'
+    message: 'What is the title of the application?'
   },
   {
     type: 'input',
-    name: 'purpose',
-    message: 'What is the purpose of the application?'
+    name: 'description',
+    message: 'Provide a description of the project?',
   },
   {
     type: 'input',
-    name: 'repository',
-    message: 'What is the repository of application'
+    name: 'motivation',
+    message: 'What is the motivation behind the application?'
   },
   {
     type: 'input',
     name: 'installation',
-    message: 'What are the installation instructions?'
+    message: 'What is the installation process for this application?'
   },
   {
     type: 'input',
-    name: 'contribution',
-    message: 'What are the constribution guidelines?'
+    name: 'usage',
+    message: 'How is this application used?'
   },
+  {
+    type: 'input',
+    name: 'screenshots',
+    message: 'Provide a scrrenshot for this application?'
+  {
+    type: 'input',
+    name: 'repository',
+    message: 'What is the repository name of the application?'
+  },
+  {
+    type: 'input',
+    name: 'contributors',
+    message: 'Who contributed to the creation of this application?'
+  },
+  {
+    type: 'input',
+    name: 'License',
+    message: 'List licenses for this application?'
+  }
 
 
   
