@@ -36,9 +36,26 @@ function renderLicenseSection(license) {
  
 }
 
+// Function returns link to demo video
+function renderVideoLink(video) {
+  const videoLink = {
+    Demonstration: '[video]https://drive.google.com/drive/folders/17w0bxACO9XH4lnYym0ktBnk5TesSS7ZX'
+  }
+  return videoLink[video]
+
+}
+// Function that returns link to gitHub page
+function renderGithubLink(github){
+  
+    const githubLink = {
+      rsainzlinarez: '[rsainzlinarez GitHub](https://github.com/rsainzlinarez/README-Generator)',
+    }
+  return githubLink[github]
+}
+
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({title, description, motivation, installation, usage, screenshots,repository, contributors, license}) {
+function generateMarkdown({title, license, description, motivation, installation, usage, video,repository, contributors, github }) {
   return `# ${title}
   ## Table of Contents
   - [Description](#Description)
@@ -49,6 +66,11 @@ function generateMarkdown({title, description, motivation, installation, usage, 
   - [Repository](#Repository)
   - [Contributors](#Contributors)
   - [License](#License)
+  - [Questions](#Questions)
+
+  ## License
+
+  ${renderLicenseSection(license)}
 
   ## Description
     ${description}
@@ -63,7 +85,7 @@ function generateMarkdown({title, description, motivation, installation, usage, 
     ${usage}
 
   ## Video Link
-    ${screenshots}
+    ${renderVideoLink(video)}
 
   ## Repository
     ${repository}
@@ -71,11 +93,8 @@ function generateMarkdown({title, description, motivation, installation, usage, 
   ## Contributions
     ${contributors}
 
-  ## License
-
-  ${renderLicenseSection(license)}
-
-
+  ## Questions
+    ${renderGithubLink(github)}
 
 `;
 }
