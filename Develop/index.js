@@ -13,6 +13,12 @@ const questions = [
     message: 'What is the title of the application?'
   },
   {
+    type: 'list',
+    name: 'license',
+    message: 'List licenses for this application?',
+    choices: ['MIT', 'Mozilla', 'IBM']
+  },
+  {
     type: 'input',
     name: 'description',
     message: 'Provide a description of the project?',
@@ -33,9 +39,10 @@ const questions = [
     message: 'How is this application used?'
   },
   {
-    type: 'input',
+    type: 'list',
     name: 'video',
-    message: 'Provide a demo video for this application?'
+    message: 'Provide a demo video for this application?',
+    choices: ['Demonstration']
   },
   {
     type: 'input',
@@ -49,10 +56,11 @@ const questions = [
   },
   {
     type: 'list',
-    name: 'license',
-    message: 'List licenses for this application?',
-    choices: ['MIT', 'Mozilla', 'IBM']
+    name: 'github',
+    message: 'Where to go for answering questions?',
+    choices: ['rsainzlinarez']
   }
+  
 ];
 
 // TODO: Create a function to write README file
