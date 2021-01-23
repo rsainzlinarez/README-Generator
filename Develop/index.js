@@ -25,7 +25,7 @@ const questions = [
   {
     type: 'input',
     name: 'installation',
-    message: 'What is the installation process for this application?'
+    choices: 'What is the installation process for this application?'
   },
   {
     type: 'input',
@@ -34,8 +34,8 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'screenshots',
-    message: 'Provide a scrrenshot for this application?'
+    name: 'video',
+    message: 'Provide a demo video for this application?'
   },
   {
     type: 'input',
@@ -48,33 +48,16 @@ const questions = [
     message: 'Who contributed to the creation of this application?'
   },
   {
-    type: 'input',
+    type: 'list',
     name: 'license',
-    message: 'List licenses for this application?'
+    message: 'List licenses for this application?',
+    choices: ['MIT', 'Mozilla', 'IBM']
   }
-
-
-  
-  // "What is the application title?", "What is the purpose of the application?", "What are the installation instructions?", "What are the constribution guidelines?", "What are the test instructions?"
-
 ];
-
-// const { purpose } = await inquirer.prompt({
-//   input:"text",
-//   message: questions[0],
-//   name: "purpose"
-// });
-// const { installation } = await inquirer.prompt({
-//   input:"text",
-//   message: questions[1],
-//   name: "installation"
-// });
-// console.log();
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   writeFile(fileName, data, 'utf8', (err) => console.log('Error in write file: ', err));
-
 }
 
 // TODO: Create a function to initialize app
