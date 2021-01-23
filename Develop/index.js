@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 const generateMarkdown = require('../Develop/utils/generateMarkdown');
+
 const {writeFile}= require('fs');
 const inquirer = require('inquirer');
 
@@ -35,6 +36,7 @@ const questions = [
     type: 'input',
     name: 'screenshots',
     message: 'Provide a scrrenshot for this application?'
+  },
   {
     type: 'input',
     name: 'repository',
@@ -47,7 +49,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'License',
+    name: 'license',
     message: 'List licenses for this application?'
   }
 
