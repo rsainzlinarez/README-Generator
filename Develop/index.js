@@ -59,7 +59,12 @@ const questions = [
     name: 'github',
     message: 'Where to go for answering questions?',
     choices: ['rsainzlinarez']
-  }
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'For more further questions you can reach me at the following email address.'
+  },
   
 ];
 
