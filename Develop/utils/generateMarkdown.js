@@ -39,23 +39,27 @@ function renderLicenseSection(license) {
 // Function returns link to demo video
 function renderVideoLink(video) {
   const videoLink = {
-    Demonstration: '[video]https://drive.google.com/drive/folders/17w0bxACO9XH4lnYym0ktBnk5TesSS7ZX'
+   
+    Demonstration: '[Demo Video](https://drive.google.com/drive/folders/17w0bxACO9XH4lnYym0ktBnk5TesSS7ZX)',
   }
-  return videoLink[video]
+  return videoLink[video];
 
 }
 // Function that returns link to gitHub page
 function renderGithubLink(github){
-  
-    const githubLink = {
-      rsainzlinarez: '[rsainzlinarez GitHub](https://github.com/rsainzlinarez/README-Generator)',
-    }
-  return githubLink[github]
+
+  const githubLink = {
+   
+
+    rsainzlinarez: '[rsainzlinarez Github](https://github.com/rsainzlinarez/README-Generator)',
+  }
+
+  return githubLink[github];
 }
 
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({title, license, description, motivation, installation, usage, video,repository, contributors, github }) {
+function generateMarkdown({title, license, description, motivation, installation, usage, video,repository, contributors, github, email }) {
   return `# ${title}
   ## Table of Contents
   - [Description](#Description)
@@ -84,8 +88,8 @@ function generateMarkdown({title, license, description, motivation, installation
   ## Usage
     ${usage}
 
-  ## Video Link
-    ${renderVideoLink(video)}
+  ## Video 
+   ${renderVideoLink(video)}
 
   ## Repository
     ${repository}
@@ -94,7 +98,9 @@ function generateMarkdown({title, license, description, motivation, installation
     ${contributors}
 
   ## Questions
-    ${renderGithubLink(github)}
+  ${renderGithubLink(github)}
+
+    For further questions regarding this application you can contact me at: ${email}
 
 `;
 }
